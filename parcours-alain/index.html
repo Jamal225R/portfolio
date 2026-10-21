@@ -1,0 +1,150 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Parcours ALAIN | Étude de cas · Jamal Traoré</title><style>
+:root{
+  --bg:#F3F4F7;
+  --surface:#FFFFFF;
+  --surface-2:#EAEDF1;
+  --ink:#1C2B3E;
+  --ink-2:#283546;
+  --slate:#3F4B59;
+  --muted:#5C6774;
+  --line:#D7DBE1;
+  --accent:#B9793A;
+  --accent-ink:#7A4E22;
+  --accent-bg:#F3E4CF;
+  font-family:'Public Sans',system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#141B24;
+    --surface:#1B2430;
+    --surface-2:#212B38;
+    --ink:#EDEAE2;
+    --ink-2:#D9D4C8;
+    --slate:#AEB6C2;
+    --muted:#8C97A3;
+    --line:#303B48;
+    --accent:#E0A75E;
+    --accent-ink:#F3D9B4;
+    --accent-bg:#3A2E1C;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#141B24;
+  --surface:#1B2430;
+  --surface-2:#212B38;
+  --ink:#EDEAE2;
+  --ink-2:#D9D4C8;
+  --slate:#AEB6C2;
+  --muted:#8C97A3;
+  --line:#303B48;
+  --accent:#E0A75E;
+  --accent-ink:#F3D9B4;
+  --accent-bg:#3A2E1C;
+}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--bg);color:var(--ink);padding-inline:20px;}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:600;letter-spacing:-0.01em;text-wrap:balance;margin:0;color:var(--ink);}
+.mono{font-family:'IBM Plex Mono',ui-monospace,monospace;font-variant-numeric:tabular-nums;}
+.wrap{max-width:980px;margin:0 auto;}
+a{color:inherit;}
+
+/* NAV */
+nav.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb, var(--bg) 86%, transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+nav.top .row{max-width:980px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:12px;flex-wrap:wrap;}
+nav.top .brand{font-family:'Fraunces',serif;font-weight:600;font-size:16px;}
+nav.top .links{display:flex;gap:18px;flex-wrap:wrap;}
+nav.top .links a{font-size:13px;color:var(--muted);text-decoration:none;font-weight:500;}
+nav.top .links a:hover{color:var(--accent-ink);}
+
+/* HERO */
+.hero{padding-block:56px 44px;display:flex;flex-direction:column;gap:18px;}
+.eyebrow{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent-ink);background:var(--accent-bg);display:inline-block;padding:5px 11px;border-radius:999px;width:fit-content;}
+.hero h1{font-size:clamp(32px,5vw,50px);line-height:1.05;}
+.hero .tagline{font-size:clamp(16px,2.2vw,19px);color:var(--slate);max-width:56ch;line-height:1.5;}
+.hero .thesis{font-size:15px;color:var(--muted);max-width:62ch;line-height:1.6;border-left:2px solid var(--line);padding-left:16px;}
+.cta-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px;}
+.btn{font-family:'Public Sans',sans-serif;font-weight:600;font-size:13.5px;border-radius:9px;padding:10px 16px;border:1px solid var(--accent);background:var(--accent);color:#2B1B08;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:6px;}
+.btn.secondary{background:transparent;color:var(--ink);border:1px solid var(--line);}
+
+/* SECTION SHELL */
+section{padding-block:44px;border-top:1px solid var(--line);}
+.section-head{display:flex;align-items:baseline;gap:14px;margin-bottom:26px;flex-wrap:wrap;}
+.section-head .num{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted);}
+.section-head h2{font-size:clamp(22px,3vw,28px);}
+.section-lede{color:var(--slate);max-width:64ch;line-height:1.6;margin:-14px 0 26px;font-size:15px;}
+
+/* PILLARS */
+.pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;}
+.pillar{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px 20px 22px;display:flex;flex-direction:column;gap:10px;}
+.pillar .tag{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--accent-ink);text-transform:uppercase;letter-spacing:.05em;}
+.pillar h3{font-size:17px;}
+.pillar p{margin:0;font-size:13.5px;color:var(--muted);line-height:1.55;}
+.pillar ul{margin:4px 0 0;padding-left:16px;font-size:13px;color:var(--slate);line-height:1.6;}
+
+/* TIMELINE */
+.timeline{display:flex;flex-direction:column;}
+.trow{display:grid;grid-template-columns:130px 1fr;gap:18px;padding:16px 0;border-top:1px solid var(--line);}
+.trow:first-child{border-top:none;}
+.trow .when{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted);padding-top:2px;}
+.trow .what h3{font-size:16px;margin-bottom:3px;}
+.trow .org{font-size:13px;color:var(--accent-ink);margin-bottom:6px;}
+.trow p{margin:0;font-size:13.5px;color:var(--slate);line-height:1.55;max-width:60ch;}
+@media (max-width:560px){.trow{grid-template-columns:1fr;gap:4px;}}
+
+/* PROJECTS */
+.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;}
+.project{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:8px;}
+.project .status{font-family:'IBM Plex Mono',monospace;font-size:10.5px;text-transform:uppercase;letter-spacing:.04em;padding:2px 8px;border-radius:999px;width:fit-content;background:var(--surface-2);color:var(--muted);}
+.project h3{font-size:16px;}
+.project p{margin:0;font-size:13.5px;color:var(--slate);line-height:1.55;}
+.project .meta{font-size:12px;color:var(--muted);margin-top:2px;}
+
+/* SKILLS */
+.skillgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;}
+.skillcat h3{font-size:14px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;font-family:'IBM Plex Mono',monospace;font-weight:500;margin-bottom:10px;}
+.chiplist{display:flex;flex-wrap:wrap;gap:6px;}
+.chip{border:1px solid var(--line);background:var(--surface);font-size:12.5px;padding:5px 11px;border-radius:999px;color:var(--slate);}
+
+/* DISTINCTIONS */
+.distinctions{display:flex;flex-direction:column;gap:12px;}
+.dist-item{display:flex;gap:14px;align-items:baseline;}
+.dist-item .year{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--accent-ink);width:44px;flex-shrink:0;}
+.dist-item p{margin:0;font-size:13.5px;color:var(--slate);line-height:1.5;}
+
+/* CONTACT / FOOTER */
+.contact-band{background:linear-gradient(160deg,#1D4ED8,#1E3A8A);border-radius:18px;padding:32px 28px;color:#FFFFFF;display:flex;flex-direction:column;gap:16px;margin-block:44px;}
+.contact-band h2{color:#FFFFFF;}
+.contact-band p{margin:0;color:#DCE6FA;font-size:14px;max-width:56ch;line-height:1.6;}
+.contact-links{display:flex;gap:10px;flex-wrap:wrap;margin-top:4px;}
+.contact-links a{font-family:'IBM Plex Mono',monospace;font-size:12.5px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);padding:8px 13px;border-radius:999px;text-decoration:none;color:#FFFFFF;font-weight:500;}
+.contact-links a:hover{background:rgba(255,255,255,.22);}
+
+footer.note{padding-block:24px 40px;font-size:12px;color:var(--muted);text-align:center;}
+
+@media (max-width:640px){
+  .hero{padding-block:40px 32px;}
+  section{padding-block:34px;}
+}
+
+/* HERO GRID + PHOTO */
+.hero-grid{display:flex;gap:32px;align-items:center;flex-wrap:wrap-reverse;}
+.hero-text{flex:1 1 420px;display:flex;flex-direction:column;gap:18px;}
+.hero-photo{flex:0 0 auto;}
+.hero-photo img{display:block;width:196px;height:196px;object-fit:cover;border-radius:20px;border:1px solid var(--line);box-shadow:0 16px 34px -16px rgba(28,43,62,.4);}
+@media (max-width:640px){.hero-photo img{width:128px;height:128px;border-radius:16px;}}
+
+/* AFRIQUE */
+.africa-intro{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin-bottom:18px;}
+.africa-intro p{margin:0;font-size:14px;color:var(--slate);line-height:1.65;max-width:70ch;}
+.project.featured{grid-column:1/-1;display:grid;grid-template-columns:1.1fr .9fr;gap:22px;align-items:center;border-color:var(--accent);}
+.project.featured .shotwrap{display:block;border-radius:10px;overflow:hidden;border:1px solid var(--line);aspect-ratio:2/1;background:var(--surface-2);transition:box-shadow .2s ease;}
+.project.featured .shotwrap:hover{box-shadow:0 6px 20px rgba(28,43,62,.16);}
+.project.featured .shotwrap:focus-visible{outline:3px solid var(--accent);outline-offset:4px;}
+.project.featured .shotwrap img{display:block;width:100%;height:100%;object-fit:cover;object-position:top;}
+.kpi-mini{display:flex;gap:18px;flex-wrap:wrap;margin:4px 0 2px;}
+.kpi-mini div{display:flex;flex-direction:column;}
+.kpi-mini b{font-family:'Fraunces',serif;font-size:24px;color:var(--accent-ink);line-height:1.1;}
+.kpi-mini span{font-size:11.5px;color:var(--muted);}
+.project .btn{width:fit-content;margin-top:6px;}
+@media (max-width:640px){.project.featured{grid-template-columns:1fr;}}
+</style><style>.studyhero{padding:50px 0 30px}p,li{line-height:1.7;color:var(--slate)}.proof{width:100%;border-radius:16px;border:1px solid var(--line)}table{border-collapse:collapse;width:100%;font-size:14px}td,th{padding:15px;text-align:left;border-bottom:1px solid var(--line)}.notice{padding:20px;background:var(--surface-2);border-radius:12px}h2{margin-bottom:18px}a:focus-visible{outline:3px solid var(--accent);outline-offset:4px}</style></head><body><div class="wrap"><nav class="top"><div class="row"><a href="../index.html#projets">← Retour au portfolio</a><span>Jamal Traoré · Learning Architect</span></div></nav><header class="studyhero"><span class="eyebrow">Étude de cas · Mobilité académique · Octobre 2026</span><h1 style="font-size:44px;margin-top:22px">Parcours ALAIN</h1><p style="font-size:22px">Relier le projet d’études, l’apprentissage et le passage à l’action.</p><p>Un dispositif pour accompagner les candidats aux études en France, en particulier les étudiants de Côte d’Ivoire. Le portail V1 complète la logique de formation par des outils personnels de préparation.</p><div class="cta-row"><a class="btn" href="https://skillup.best/courses/parcours-alain-reussir-sa-mobilite-academique/" target="_blank" rel="noopener">Voir le cours Tutor LMS ↗</a><a class="btn secondary" href="https://parcours-alain-portail.jamaltraore707.chatgpt.site" target="_blank" rel="noopener">Portail V1 · accès actuellement privé ↗</a></div></header><img class="proof" src="apercu.svg" alt="Vue de synthèse illustrée du portail Parcours ALAIN"><section><span class="eyebrow">01 · Le besoin</span><h2>Transformer des démarches dispersées en parcours guidé</h2><p>Le besoin visé est double : construire un projet cohérent entre études et avenir professionnel, puis organiser les actions nécessaires à sa préparation. Le portail aide le candidat à se situer, consulter les sources officielles et suivre ses propres étapes.</p><p><strong>Hypothèse de conception :</strong> une feuille de route explicite peut soutenir l’autonomie et réduire les oublis. Cette hypothèse reste à tester auprès des utilisateurs du portail.</p></section><section><span class="eyebrow">02 · Mon rôle</span><h2>Ingénierie pédagogique et conception produit</h2><div class="pillars"><article class="pillar"><h3>Structurer</h3><p>Définir la cible, articuler projet académique et professionnel, organiser les étapes et concevoir les activités de préparation.</p></article><article class="pillar"><h3>Outiller</h3><p>Traduire le parcours en diagnostic, checklists, calendrier, carnet et ressources. Développer le portail avec assistance IA et une charte cohérente.</p></article><article class="pillar"><h3>Vérifier</h3><p>Contrôler les sources institutionnelles, tester les interactions et expliciter les limites de l’autoévaluation et du stockage local.</p></article></div></section><section><span class="eyebrow">03 · Alignement pédagogique</span><h2>Une activité et une trace pour chaque objectif</h2><div style="overflow-x:auto"><table><thead><tr><th>Objectif</th><th>Activité proposée</th><th>Trace observable</th></tr></thead><tbody><tr><td>Argumenter la cohérence du projet</td><td>Relier acquis, formation visée et objectif professionnel</td><td>Argumentaire dans le carnet</td></tr><tr><td>Identifier les priorités de préparation</td><td>Répondre au diagnostic de six questions</td><td>Priorités issues des réponses déclaratives</td></tr><tr><td>Organiser les démarches</td><td>Vérifier les sources et planifier les dates pertinentes</td><td>Calendrier personnel exportable</td></tr><tr><td>Suivre ses actions</td><td>Actualiser les checklists des quatre étapes</td><td>Actions cochées, à confronter aux réalisations</td></tr></tbody></table></div></section><section><span class="eyebrow">04 · Réalisation</span><h2>Un portail léger, centré sur l’action</h2><div class="kpi-mini"><div><b>6</b><span>questions d’autoévaluation</span></div><div><b>14</b><span>actions de préparation</span></div><div><b>4</b><span>étapes du projet</span></div><div><b>5</b><span>ressources officielles</span></div></div><p>Tableau de bord, recommandations déterministes, carnet de projet, export/restauration du suivi et export de calendrier au format .ics. Le portail utilise HTML, CSS et JavaScript ; le parcours de formation est hébergé sur WordPress avec Tutor LMS.</p><p>Le score reflète uniquement les réponses de l’utilisateur. Il ne constitue ni une évaluation certifiante ni une probabilité d’admission ou de visa. Les dates officielles ne sont pas préremplies.</p></section><section><span class="eyebrow">05 · Vérification et limites</span><h2>Distinguer réalisation, test technique et impact</h2><ul><li><strong>Réalisé :</strong> portail V1 et ses outils personnels de préparation.</li><li><strong>Vérifié dans le navigateur :</strong> calcul du diagnostic, conservation d’une action cochée après rechargement et ajout d’une échéance.</li><li><strong>À évaluer :</strong> compréhension des consignes, usage mobile, accessibilité complète et effets sur la qualité des projets.</li><li><strong>Limites :</strong> données conservées dans le navigateur, sans synchronisation multiappareil ni tableau de bord conseiller. Aucune remontée automatique du score ou des actions dans Tutor LMS.</li></ul><div class="notice"><strong>Arbitrage :</strong> le stockage local permet une V1 simple et limite la collecte centralisée. En contrepartie, il ne permet pas de piloter une cohorte et peut entraîner une perte de suivi si les données du navigateur sont effacées.</div></section><section><span class="eyebrow">06 · Mesure et amélioration</span><h2>Prochaines validations</h2><p>Aucun résultat d’efficacité n’est revendiqué pour le portail. Les indicateurs ci-dessous constituent un plan de mesure proposé.</p><ol><li>Observer des candidats réalisant le diagnostic puis planifiant une action : taux de réussite de la tâche, temps et difficultés rencontrées.</li><li>Évaluer un argumentaire avant/après à l’aide d’une grille : cohérence, précision des choix et lien avec le projet professionnel.</li><li>Décider d’une intégration des données au LMS après validation de l’usage, des besoins d’accompagnement et des règles de confidentialité.</li></ol></section><section><h2>Sources et périmètre</h2><p>Conception fondée sur les documents du projet Parcours ALAIN, sa version commerciale et sa charte graphique. Les modalités administratives restent du ressort des sources officielles :</p><ul><li><a href="https://www.campusfrance.org/fr/candidature-procedure-etudes-en-france">Campus France · procédure Études en France</a></li><li><a href="https://www.ivoire.campusfrance.org/procedure-etudes-en-france">Campus France Côte d’Ivoire</a></li><li><a href="https://www.france-visas.gouv.fr/etudiant">France-Visas · étudiant</a></li></ul><p>Sources consultées le 21 octobre 2026. Parcours ALAIN est un accompagnement pédagogique indépendant, sans affiliation à Campus France ni garantie d’admission ou de visa.</p><a class="btn secondary" href="../index.html#projets">Retour aux projets</a></section><footer class="note">Lassina Jamal Traoré · Ingénierie pédagogique, data et mobilité</footer></div></body></html>
