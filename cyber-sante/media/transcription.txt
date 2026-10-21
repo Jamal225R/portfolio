@@ -1,0 +1,20 @@
+CAPSULE CYBER SANTÉ
+Scénario fictif. Vidéo sans voix off ; lecture vocale optionnelle dans le navigateur.
+
+Un message avant la relève
+Léa, infirmière fictive, consulte sa messagerie avant la relève. Un courriel annonce la suspension de son accès et exige une réaction immédiate. Le service et les adresses de cette scène sont entièrement inventés.
+
+Lire au-delà du nom affiché
+Le nom affiché est Support numérique. Mais ce nom ne prouve pas l’identité de l’expéditeur. L’adresse complète et la destination du lien doivent être examinées, sans ouvrir le lien douteux.
+
+Une demande qui doit alerter
+Le courriel demande le mot de passe pour conserver l’accès. Cette demande, associée à l’urgence imposée et à une destination inhabituelle, constitue un faisceau de signaux d’alerte. Une présentation soignée ne suffit pas à rassurer.
+
+La décision de Léa
+Léa n’utilise pas le lien du message. Elle ouvre le service depuis son accès habituel et contacte le support par un canal déjà connu. Elle suit la procédure de signalement de son établissement.
+
+Un indice ne suffit pas
+Un message sans faute peut être frauduleux. Le cadenas indique une connexion chiffrée, pas l’honnêteté de son auteur. À l’inverse, une alerte doit être vérifiée : il ne suffit pas de tout supprimer automatiquement.
+
+À vous de décider
+Dans la suite, vous analyserez un nouveau message. Repérez un indice, choisissez une action de vérification et justifiez la protection des identifiants. Les questions sont originales et ne constituent pas une certification Pix.
