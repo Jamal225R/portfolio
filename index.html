@@ -176,7 +176,7 @@ footer.note{padding-block:24px 40px;font-size:12px;color:var(--muted);text-align
         <p class="tagline">Interface entre formation, employabilité et transformation des compétences — je conçois des dispositifs pédagogiques et des solutions hybrides qui relient formation, data et mobilité internationale.</p>
         <p class="thesis">Docteur en sciences de l'information et de la communication (mention learning tools, philosophie lifelong learning et orientation tout au long de la vie). Dix ans de pratique en ingénierie pédagogique, data et IA appliquée à l'apprentissage, avec l'ambition de faciliter la circulation des compétences entre l'Afrique, l'Europe et l'Asie.</p>
         <div class="cta-row">
-          <a class="btn" href="mailto:jamaltraore707@gmail.com">Me contacter</a>
+          <a class="btn js-mail" href="#contact" data-u="jamaltraore707" data-d="gmail.com">Me contacter</a>
           <a class="btn secondary" href="https://www.linkedin.com/in/jamal-l-traore-84b941b4/" target="_blank" rel="noopener">LinkedIn</a>
           <a class="btn secondary" href="https://github.com/Jamal225R" target="_blank" rel="noopener">GitHub</a>
         </div>
@@ -254,7 +254,7 @@ footer.note{padding-block:24px 40px;font-size:12px;color:var(--muted);text-align
         <p>Pipelines d'intégration de données, tableaux de bord RH ; réduction de 20 % du temps d'analyse pour les RRH.</p></div>
       </div>
       <div class="trow">
-        <div class="when">Depuis 2021</div>
+        <div class="when">2021 – 2024</div>
         <div class="what"><h3>Enseignant Data Science &amp; Business Intelligence</h3><div class="org">ESLSCA Business School</div>
         <p>Modules blended learning (Python, BI, SQL), workshops Data Literacy pour publics non-techniciens.</p></div>
       </div>
@@ -302,13 +302,13 @@ footer.note{padding-block:24px 40px;font-size:12px;color:var(--muted);text-align
       <div class="project">
         <span class="status">Recherche en cours</span>
         <h3>Chantier IAMIC</h3>
-        <p>Article scientifique sur l'impact de l'IA sur les métiers de la data science, approche lexicométrique et qualitative — en révision après relecture par les pairs.</p>
+        <p>Article scientifique sur l'impact de l'IA sur les métiers de la data science, approche lexicométrique et qualitative — resoumission prévue à l'automne 2026 avec un corpus enrichi d'entretiens complémentaires.</p>
       </div>
       <div class="project">
         <span class="status">Outil</span>
         <h3>Cockpit_IGP</h3>
         <p>Dépôt GitHub personnel dédié au pilotage de projets d'ingénierie pédagogique.</p>
-        <div class="meta">github.com/Jamal225R/Cockpit_IGP</div>
+        <div class="meta">Dépôt privé · démonstration sur demande</div>
       </div>
       <div class="project">
         <span class="status">Exploratoire</span>
@@ -398,8 +398,7 @@ footer.note{padding-block:24px 40px;font-size:12px;color:var(--muted);text-align
       <h2>Travaillons ensemble</h2>
       <p>Ouvert aux échanges autour de l'ingénierie pédagogique, des projets data/IA appliqués à l'apprentissage, et des dispositifs de mobilité académique et professionnelle entre l'Afrique, l'Europe et l'Asie.</p>
       <div class="contact-links">
-        <a href="mailto:jamaltraore707@gmail.com">jamaltraore707@gmail.com</a>
-        <a href="tel:+33626821707">06 26 82 17 07</a>
+        <a class="js-mail" href="#contact" data-u="jamaltraore707" data-d="gmail.com" data-show="1">jamaltraore707 [at] gmail [point] com</a>
         <a href="https://www.skillup.best/" target="_blank" rel="noopener">www.skillup.best</a>
         <a href="https://www.linkedin.com/in/jamal-l-traore-84b941b4/" target="_blank" rel="noopener">linkedin.com/in/jamal-l-traore-84b941b4</a>
         <a href="https://github.com/Jamal225R" target="_blank" rel="noopener">github.com/Jamal225R</a>
@@ -411,4 +410,12 @@ footer.note{padding-block:24px 40px;font-size:12px;color:var(--muted);text-align
 
 <footer class="note">Lassina Jamal Traoré — Learning Architect &amp; Ingénieur pédagogique.</footer>
 
+<script>
+/* Anti-scraping : l'adresse e-mail est reconstituée dans le navigateur et n'apparaît pas en clair dans le HTML */
+document.querySelectorAll('a.js-mail').forEach(function (a) {
+  var m = a.dataset.u + '@' + a.dataset.d;
+  a.href = 'mailto:' + m;
+  if (a.dataset.show) { a.textContent = m; }
+});
+</script>
 </body></html>
